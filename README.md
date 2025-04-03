@@ -2,6 +2,8 @@ Developers: Patrick M and Chris M
 
 A game which a user plays 10 rounds of a mock-stock market, which their goal is to make as much money as possible.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Tools used:
 - Python
 - OOP File "MockStock.py"
@@ -11,7 +13,9 @@ Future Development:
 - Local Program with GUI
 - Possibly website... if we can find a host
 
-The Game:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**The Game**:
 The current version of the game runs in a terminal, but we are looking to use the tkinter gui for the game.
 
 Each round the user is given info of the current stock and its price, aswell with the amount of money they have and how much of the stock they own.
