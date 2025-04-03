@@ -8,6 +8,7 @@ stock = Stock()
 
 # do a for loop for only 10 turns the user has, after 10 rounds the game ends
 for i in range(10):
+    print("")
     # print simple information
     if i == 9:
         print("FINAL ROUND")
