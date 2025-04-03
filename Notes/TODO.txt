@@ -1,0 +1,1 @@
+- Make sure that inputs where the user should input an integer, IS AN INTEGER
