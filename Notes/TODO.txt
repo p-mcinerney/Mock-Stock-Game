@@ -1,10 +1,4 @@
-- Make sure that inputs where the user should input an integer, IS AN INTEGER
-
-- Make sure all computation is correct
-
-- Work on the idea of market trends i/e: if the market went up last, have the market more likely to go up again
---> the idea of +3, -1 for upward trend | -3, +1 for negative trends
-
 - Implement tkinter for a local gui
+--> add pyinstaller so app works on all devices, whether they have python installed or not
 
 - Implement the discord api for a bot --> DO NOT PUT THE API KEY IN THE REPO ISTG DONT DO IT OR WE WILL BE HACKEDDDDD

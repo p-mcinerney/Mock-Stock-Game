@@ -18,14 +18,13 @@ for i in range(10):
     print(f"Bank: ${player.balance} | Amount of stock: {player.numstock}")
     while True:
         msg = input("Action: ")
-        # consider removing this because we can just put it above for the user to see
-        """
-        if msg.lower() == "view market":
-            player.view_market()  
-        """
         if msg.lower() == "sell":
-            player.numstock, player.balance = player.sell(stock.current_value, player.numstock, player.balance)
-            break
+            if player.numstock > 0:
+                player.numstock, player.balance = player.sell(stock.current_value, player.numstock, player.balance)
+                break
+            else:
+                print("You have no stock to sell.")
+                continue
         elif msg.lower() == "buy":
             player.numstock, player.balance = player.buy(stock.current_value, player.numstock, player.balance)
             break
@@ -39,5 +38,4 @@ for i in range(10):
 print(f"Final Score\n{player.username} | ${player.balance} | {stock.name}")
 
 with open("score.txt", "a") as file:
-    file.write(f"Username: {player.username} | Score: {player.balance}")
-
+    file.write(f"Username: {player.username} | Score: {player.balance}\n")
