@@ -1,12 +1,12 @@
 from MockStock import *
-
+import time
 # TODO - Add an input where the user can choose whether to play the game or look at high scores set
 # TODO - Get an input where the user either types in "p" to play or "h" for highscores
 
     # TODO - If they ask to play, then run the program as normal and play the game
     # TODO - If they ask for highscores, load all the highscores from the score.txt file, and print the top 5 highest scores
 while True:
-    play = input("Press 'p' to play or press 'h' to look at the highscores: ")
+    play = input("Press 'p' to play: ")
     
     if play.lower() == "p":
         username = input("Username: ")
@@ -45,18 +45,33 @@ while True:
                 # update the stock value after the round is over
             stock.update_value()
 
-        print(f"Final Score\n{player.username} | ${player.balance} | {stock.name}")
+        print(f"\n\nFinal Score\n{player.username} | ${player.balance} | {stock.name}")
+
+        time.sleep(10)
 
         with open("score.txt", "a") as file:
             file.write(f"{player.username}/{player.balance}\n")
         
         break
-    
+    """
     elif play.lower() == "h":
-        with open("score.txt", "r") as file:
-            for line in file:
-                name, score = line.split("/")
-                print(f"Username: {name} | Score: {score}", end="")
+        try:
+            with open("dist/score.txt", "r") as file:
+                for line in file:
+                    try:
+                        name, score = line.split("/")
+                    except ValueError:
+                        continue
+                    print(f"Username: {name} | Score: {score}", end="")
+        except FileNotFoundError:
+            try:
+                with open("dist/score.txt", "w") as file:
+                    file.write("Start\n")
+            except FileNotFoundError:
+                print("Error: No 'dist/' directory")
+                time.sleep(10)
         break
     else:   
         print("Error: Use 'p' or 'h'")
+    """
+    
