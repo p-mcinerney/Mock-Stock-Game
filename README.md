@@ -23,4 +23,5 @@ Then they have 3 actions they can do:
 
 After the game is over the score and username is saved locally to keep track of highscores.
 
+
 ![image](https://github.com/user-attachments/assets/c4f94829-d005-4b9b-b3de-5e7f4c416141)
